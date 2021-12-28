@@ -31,6 +31,8 @@ final class AllCurrencyCollectionViewCell: UICollectionViewCell {
         static let flagLabelWidthConstr: CGFloat = 40.0
         static let leadingConstr: CGFloat = 10
         static let trailingConstr: CGFloat = -10
+        static let flagLabelFontSize: CGFloat = 30
+        static let rateStackWidth: CGFloat = 90.0
     }
     
     override func prepareForReuse() {
@@ -74,7 +76,7 @@ extension AllCurrencyCollectionViewCell {
     }
     
     private func currencyStackAppearence() {
-        self.flagLabel.font = UIFont.systemFont(ofSize: 30)
+        self.flagLabel.font = UIFont.systemFont(ofSize: Metrics.flagLabelFontSize)
         self.currencyShortName.textColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         self.currencyShortName.font = UIFont.systemFont(ofSize: Metrics.currencyShortNameFontSize, weight: .semibold)
         self.currencyName.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
@@ -129,7 +131,7 @@ extension AllCurrencyCollectionViewCell {
             self.rateStack.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             self.rateStack.leadingAnchor.constraint(equalTo: self.currencyStack.trailingAnchor, constant: Metrics.leadingConstr),
             self.rateStack.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Metrics.trailingConstr),
-            self.rateStack.widthAnchor.constraint(equalToConstant: 90)
+            self.rateStack.widthAnchor.constraint(equalToConstant: Metrics.rateStackWidth)
         ])
     }
     

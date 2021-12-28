@@ -23,6 +23,22 @@ final class SecondScreenTableViewCell: UITableViewCell {
     
     weak var delegate: SecondScreenTableViewCellDelegate?
     
+    private enum Metrics {
+        static let cornerRadius: CGFloat = 8.0
+        static let currencyTextFieldFontSize: CGFloat = 20.0
+        static let currencyShortNameFontSize: CGFloat = 16.0
+        static let currencyNameFontSize: CGFloat = 13.0
+        static let currencyStackSpasing: CGFloat = 4.0
+        static let flagLabelFontSize: CGFloat = 30.0
+        static let flagLabelHeight: CGFloat = 25.0
+        static let flagLabelWidtg: CGFloat = 40.0
+        static let leadingConstr: CGFloat = 10.0
+        static let currencyStackWidth: CGFloat = 150.0
+        static let currencyTextFieldTrailing: CGFloat = -20.0
+        static let currencyTextFieldHeight: CGFloat = 50.0
+       
+    }
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: .default, reuseIdentifier: reuseIdentifier)
         self.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
@@ -75,26 +91,25 @@ extension SecondScreenTableViewCell {
     }
     
     private func allAppearence() {
-        self.layer.cornerRadius = 8
+        self.layer.cornerRadius = Metrics.cornerRadius
     }
     
     private func textFieldSetup() {
         self.currencyTextField.keyboardType = UIKeyboardType.numberPad
-        self.currencyTextField.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
+        self.currencyTextField.font = UIFont.systemFont(ofSize: Metrics.currencyTextFieldFontSize, weight: .semibold)
         self.currencyTextField.backgroundColor = .clear
         self.currencyTextField.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         self.currencyTextField.textAlignment = .right
-        self.currencyTextField.layer.cornerRadius = 5        
     }
     
     private func currencyStackAppearence() {
         self.currencyShortName.textColor =  #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        self.currencyShortName.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+        self.currencyShortName.font = UIFont.systemFont(ofSize: Metrics.currencyShortNameFontSize, weight: .semibold)
         self.currencyName.textColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
-        self.currencyName.font = UIFont.systemFont(ofSize: 13, weight: .medium)
+        self.currencyName.font = UIFont.systemFont(ofSize: Metrics.currencyNameFontSize, weight: .medium)
         
         self.currencyStack.axis = .vertical
-        self.currencyStack.spacing = 4
+        self.currencyStack.spacing = Metrics.currencyStackSpasing
         self.currencyStack.alignment = .leading
         
         self.currencyStack.addArrangedSubview(currencyShortName)
@@ -102,17 +117,17 @@ extension SecondScreenTableViewCell {
     }
     
     private func flagLabelAppearence() {
-        self.flagLabel.font = UIFont.systemFont(ofSize: 30)
+        self.flagLabel.font = UIFont.systemFont(ofSize: Metrics.flagLabelFontSize)
     }
     
     private func flagLabelSetupLayout() {
         self.flagLabel.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
-            self.flagLabel.heightAnchor.constraint(equalToConstant: 25),
-            self.flagLabel.widthAnchor.constraint(equalToConstant: 40),
+            self.flagLabel.heightAnchor.constraint(equalToConstant: Metrics.flagLabelHeight),
+            self.flagLabel.widthAnchor.constraint(equalToConstant: Metrics.flagLabelWidtg),
             self.flagLabel.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.flagLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10),
+            self.flagLabel.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: Metrics.leadingConstr),
         ])
     }
     
@@ -121,8 +136,8 @@ extension SecondScreenTableViewCell {
         
         NSLayoutConstraint.activate([
             self.currencyStack.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.currencyStack.leadingAnchor.constraint(equalTo: self.flagLabel.trailingAnchor, constant: 10),
-            self.currencyStack.widthAnchor.constraint(equalToConstant: 150)
+            self.currencyStack.leadingAnchor.constraint(equalTo: self.flagLabel.trailingAnchor, constant: Metrics.leadingConstr),
+            self.currencyStack.widthAnchor.constraint(equalToConstant: Metrics.currencyStackWidth)
         ])
     }
     
@@ -131,9 +146,9 @@ extension SecondScreenTableViewCell {
         
         NSLayoutConstraint.activate([
             self.currencyTextField.centerYAnchor.constraint(equalTo: self.centerYAnchor),
-            self.currencyTextField.leadingAnchor.constraint(equalTo: self.currencyStack.trailingAnchor, constant: 10),
-            self.currencyTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            self.currencyTextField.heightAnchor.constraint(equalToConstant: 50)
+            self.currencyTextField.leadingAnchor.constraint(equalTo: self.currencyStack.trailingAnchor, constant: Metrics.leadingConstr),
+            self.currencyTextField.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: Metrics.currencyTextFieldTrailing),
+            self.currencyTextField.heightAnchor.constraint(equalToConstant: Metrics.currencyTextFieldHeight)
         ])
     }
 }

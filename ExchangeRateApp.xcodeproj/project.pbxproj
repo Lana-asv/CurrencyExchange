@@ -19,9 +19,6 @@
 		293252EC276343AC007DB3C0 /* AllCurrencyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293252EB276343AC007DB3C0 /* AllCurrencyView.swift */; };
 		293252F0276343D8007DB3C0 /* AllCurrencyCVFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293252EF276343D8007DB3C0 /* AllCurrencyCVFlowLayout.swift */; };
 		293253042763629E007DB3C0 /* SecondScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293253032763629E007DB3C0 /* SecondScreenTableViewCell.swift */; };
-		2932535B27674ECB007DB3C0 /* CurrentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932535A27674ECB007DB3C0 /* CurrentData.swift */; };
-		2932535E276751FF007DB3C0 /* Rate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932535D276751FF007DB3C0 /* Rate.swift */; };
-		2932536127675B17007DB3C0 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932536027675B17007DB3C0 /* Network.swift */; };
 		293253672769CA56007DB3C0 /* CBRData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293253662769CA55007DB3C0 /* CBRData.swift */; };
 		2932536E2769CEC1007DB3C0 /* NetworkCBR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2932536D2769CEC1007DB3C0 /* NetworkCBR.swift */; };
 		293253752769F2FA007DB3C0 /* FirstScreenModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 293253742769F2FA007DB3C0 /* FirstScreenModel.swift */; };
@@ -65,9 +62,6 @@
 		293252EB276343AC007DB3C0 /* AllCurrencyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCurrencyView.swift; sourceTree = "<group>"; };
 		293252EF276343D8007DB3C0 /* AllCurrencyCVFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCurrencyCVFlowLayout.swift; sourceTree = "<group>"; };
 		293253032763629E007DB3C0 /* SecondScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondScreenTableViewCell.swift; sourceTree = "<group>"; };
-		2932535A27674ECB007DB3C0 /* CurrentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentData.swift; sourceTree = "<group>"; };
-		2932535D276751FF007DB3C0 /* Rate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rate.swift; sourceTree = "<group>"; };
-		2932536027675B17007DB3C0 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		293253662769CA55007DB3C0 /* CBRData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CBRData.swift; sourceTree = "<group>"; };
 		2932536D2769CEC1007DB3C0 /* NetworkCBR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCBR.swift; sourceTree = "<group>"; };
 		293253742769F2FA007DB3C0 /* FirstScreenModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstScreenModel.swift; sourceTree = "<group>"; };
@@ -172,11 +166,8 @@
 				29EC41432761EF35000904E8 /* AppDelegate.swift */,
 				29EC41452761EF35000904E8 /* SceneDelegate.swift */,
 				29055DFD2773C0A500F23E70 /* Router.swift */,
-				2932536027675B17007DB3C0 /* Network.swift */,
 				2932536D2769CEC1007DB3C0 /* NetworkCBR.swift */,
 				293253662769CA55007DB3C0 /* CBRData.swift */,
-				2932535D276751FF007DB3C0 /* Rate.swift */,
-				2932535A27674ECB007DB3C0 /* CurrentData.swift */,
 				29EC414C2761EF37000904E8 /* Assets.xcassets */,
 				29EC41512761EF37000904E8 /* Info.plist */,
 				29ABC193277AFCFF00CFEDD4 /* Launch Screen.storyboard */,
@@ -260,7 +251,6 @@
 				29325394276B669F007DB3C0 /* SecondScreenAssembly.swift in Sources */,
 				29325396276B6987007DB3C0 /* SecondScreenPresenter.swift in Sources */,
 				293253042763629E007DB3C0 /* SecondScreenTableViewCell.swift in Sources */,
-				2932535B27674ECB007DB3C0 /* CurrentData.swift in Sources */,
 				293252E827634374007DB3C0 /* AllCurrencyCollectionViewCell.swift in Sources */,
 				29325383276B2D57007DB3C0 /* FirstScreenAssembly.swift in Sources */,
 				29ABC192277A904500CFEDD4 /* ValuteEntity+CoreDataClass.swift in Sources */,
@@ -268,7 +258,6 @@
 				29055DE0277202AE00F23E70 /* CurrencyListViewCell.swift in Sources */,
 				293252E32763433E007DB3C0 /* FirstViewController.swift in Sources */,
 				29055DDE2772024A00F23E70 /* CurrencyListViewController.swift in Sources */,
-				2932535E276751FF007DB3C0 /* Rate.swift in Sources */,
 				293252F0276343D8007DB3C0 /* AllCurrencyCVFlowLayout.swift in Sources */,
 				29055DFC2773BF4700F23E70 /* CurrencyListScreenAssembly.swift in Sources */,
 				29ABC1822779DCCE00CFEDD4 /* ExchangeRateApp.xcdatamodeld in Sources */,
@@ -279,7 +268,6 @@
 				29055DFE2773C0A500F23E70 /* Router.swift in Sources */,
 				2932537F276A7A6F007DB3C0 /* FirstScreenPresenter.swift in Sources */,
 				29EC41462761EF35000904E8 /* SceneDelegate.swift in Sources */,
-				2932536127675B17007DB3C0 /* Network.swift in Sources */,
 				293253672769CA56007DB3C0 /* CBRData.swift in Sources */,
 				293252EC276343AC007DB3C0 /* AllCurrencyView.swift in Sources */,
 				29ABC17D2779B40400CFEDD4 /* ListCVFlowLayout.swift in Sources */,
